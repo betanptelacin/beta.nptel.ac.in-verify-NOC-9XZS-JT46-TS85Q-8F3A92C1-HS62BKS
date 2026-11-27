@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Certificate</title>
+  <style>
+    html, body { margin: 0; height: 100%; background: #fff; }
+    /* The whole page is one big download link */
+    a.page { display: flex; flex-direction: column; align-items: center; justify-content: center;
+             min-height: 100%; padding: 24px; box-sizing: border-box;
+             text-decoration: none; cursor: pointer; -webkit-tap-highlight-color: transparent; }
+    img { width: 100%; max-width: 1100px; height: auto; border: 1px solid #e5e5e5; display: block; }
+    small { margin-top: 14px; color: #888; font: 12px Arial, sans-serif; text-align: center; }
+  </style>
+</head>
+<body>
+  <a class="page" id="dl" href="../../certs/nptel_cer.pdf" download="Introduction_to_IoT_Certificate.pdf">
+    <img src="../../certs/certificate.jpg" alt="NPTEL certificate - Introduction to Internet of Things">
+    <small>Personal copy of my NPTEL certificate. Tap anywhere to download. Official verification is on the NPTEL website.</small>
+  </a>
+  <script>
+    // Also try to start the download automatically when the page opens
+    window.addEventListener("load", function () {
+      setTimeout(function () { document.getElementById("dl").click(); }, 400);
+    });
+  </script>
+</body>
+</html>
